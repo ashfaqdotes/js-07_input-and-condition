@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 7 User Input & Conditional</title>
+</head>
+<body>
+
+  <script>
+  // 1. Write a program to take “city” name as input from user. If user enters “Karachi”, 
+  // welcome the user like this: “Welcome to city of lights”
+
+  var city_name = prompt("Enter the city name:");
+    
+  if (city_name == "karachi") {
+    alert("Welcome to the city of lights!");
+  } 
+  else if (city_name == "lahore") {
+    alert("Welcome to the heart of Pakistan!");
+  } 
+  else if (city_name == "islamabad") {
+    alert("Welcome to the beautiful capital city!");
+  } 
+  else if (city_name == "peshawar") {
+    alert("Welcome to the city of flowers!");
+  } 
+  else if (city_name == "quetta") {
+    alert("Welcome to the land of mountains!");
+  } 
+  else if (city_name == "multan") {
+    alert("Welcome to the city of saints!");
+  } 
+  else if (city_name == "faisalabad") {
+    alert("Welcome to the Manchester of Pakistan!");
+  } 
+  else if (city_name == "rawalpindi") {
+    alert("Welcome to the twin city of Islamabad!");
+  } 
+  else if (city_name == "murree") {
+    alert("Welcome to the Queen of Hills!");
+  } 
+  else if (city_name == "abbottabad") {
+    alert("Welcome to the city of pines!");
+  } 
+  else if (city_name == "skardu") {
+    alert("Welcome to the gateway to the Karakoram!");
+  } 
+  else if (city_name == "swat") {
+    alert("Welcome to the Switzerland of Pakistan!");
+  } 
+  else if (city_name == "hunza") {
+    alert("Welcome to the mesmerizing valley of Hunza!");
+  } 
+  else if (city_name == "bahawalpur") {
+    alert("Welcome to the princely state of Bahawalpur!");
+  } 
+  else if (city_name == "sialkot") {
+    alert("Welcome to the city of sports!");
+  } 
+  else if (city_name == "gujranwala") {
+    alert("Welcome to the city of wrestlers!");
+  } 
+  else if (city_name == "sukkur") {
+    alert("Welcome to the land of bridges!");
+  } 
+  else if (city_name == "muzaffarabad") {
+    alert("Welcome to the capital of Azad Jammu and Kashmir!");
+  } 
+  else if (city_name == "gwadar") {
+    alert("Welcome to the emerging port city!");
+  } 
+  else if (city_name == "chitral") {
+    alert("Welcome to the scenic valley of Chitral!");
+  } 
+  else {
+    alert("Welcome to " + city_name);
+  }
+
+  //2. Write a program to take “gender” as input from user. If the
+  // user is male, give the message: Good Morning Sir. If the
+  // user is female, give the message: Good Morning Ma’am.
+
+  var gender = prompt("Enter you Gender: ");
+
+  if (gender == "male") {
+    alert("Good Morning Sir.!");
+  }
+
+  else if (gender == "female") {
+    alert("Good Morning Ma'am.");
+  }
+
+  else{
+    alert("Good Morning "+ gender);
+  }
+
+  //3.  Write a program to take input color of road traffic signal
+  // from the user & show the message according to this table:
+
+  var color = prompt("Enter the color of the traffic signal (red, yellow, green):")
+
+  if (color == "red") {
+    alert("Stop! The traffic signal is red.");
+  } 
+  else if (color == "yellow") {
+    alert("Be ready! The traffic signal is about to change.");
+  } 
+  else if (color == "green") {
+    alert("Go! The traffic signal is green.");
+  } 
+  else {
+    alert("Invalid color. Please enter a valid traffic signal color.");
+  }
+
+  //4. Write a program to take input remaining fuel in car (in litres) from user. 
+  // If the current fuel is less than 0.25litres, show the message “Please refill the fuel in your car”
+
+  var remaining_fuel = +prompt("Enter the remaining fuel in your car (in liters): ");
+
+  if (remaining_fuel <= 0.25){
+    alert("Please refill the fuel in your car.");
+  }
+  else{
+    alert("You have enough fuel in your car.")
+  }
+
+  //5. Run this script, & check whether alert message would be displayed or not. Record the outputs.
+
+  // a)
+  var a = 4;
+  if (++a === 5){
+    alert("given condition for variable a is true");
+  } 
+  // output: above given condition is true
+
+  // b)
+  var b = 82;
+  if (b++ === 83){
+  alert("given condition for variable b is true");
+  }
+  // output: above given condition is false nothing to display any output
+
+  // c)
+  var c = 12;
+  if (c++ === 13){
+  alert("condition 1 is true");
+  }
+  if (c === 13){
+  alert("condition 2 is true");
+  }
+  if (++c < 14){
+  alert("condition 3 is true");
+  }
+  if(c === 14){
+  alert("condition 4 is true");
+  }
+  // output: above given condition 2 and condition 4 is true both will be display 
+
+  // d)
+  var materialCost = 20000;
+  var laborCost = 2000;
+  var totalCost = materialCost + laborCost;
+  if (totalCost === laborCost + materialCost){
+  alert("The cost equals");
+  }
+  // output: above given condition is true and display "The cost equals"
+
+  // e)
+  if (true){
+  alert("True");
+  }
+  if (false){
+  alert("False");
+  }
+  // output: above given First condition is true
+
+  // f)
+  if("car" < "cat"){
+  alert("car is smaller than cat");
+  }
+
+  // 7. Guess game:  
+  var guess1 = "Incorrect answer. Try again!"
+  var guess2 = "Incorrect answer. Try again!"
+  var guess3 = "Incorrect answer. Try again!"
+  var guess4 = "Close enough to the correct answer."
+  var guess5 = "Bingo! Correct answer."
+  var guess6 = "Incorrect answer. Try again!"
+  var guess7 = "Close enough to the correct answer."
+  var guess8 = "Close enough to the correct answer."
+  var guess9 = "Incorrect answer. Try again!"
+  var guess10 = "Incorrect answer. Try again!"
+
+  var userguess = +prompt('Guess a number from 1 to 10: ');
+  if (userguess === 1){
+  alert(guess1);
+  }
+  else if (userguess === 2){
+      alert(guess2);
+  }
+  else if (userguess === 3){
+      alert(guess3);
+  }
+  else if (userguess === 4){
+      alert(guess4);
+  }
+  else if (userguess === 5){
+      alert(guess5);
+  }
+  else if (userguess === 6){
+      alert(guess6);
+  }
+  else if (userguess === 7){
+      alert(guess7);
+  }
+  else if (userguess === 8){
+      alert(guess8);
+  }
+  else if (userguess === 9){
+      alert(guess9);
+  }
+  else if (userguess === 10){
+      alert(guess10);
+  }
+  else{
+      alert('Try again! You entered wrong number.');
+  }
+
+  // Write a program to check whether the given number is divisible by 3. 
+  // Show the message to the user if the number is divisible by 3.
+  var usernumber =+ prompt('Enter any number')
+  if (usernumber % 3 === 0){
+    alert('Your number is divisible by 3!')
+  } 
+  else{
+    alert('Your number is not divisible by 3!')
+  }
+
+
+  //9. Write a program that checks whether the given input is an even number or an odd number.
+  var numberuser =+ prompt('Enter any number')
+    if (numberuser % 2 === 0){
+      alert('The number is even!')
+    } 
+    else{
+      alert('Your number is odd.')
+    }
+
+  //10. Write a program that takes temperature as input and shows a message based on following criteria
+  var tempnum =+ prompt('Whats temperature today?') 
+  if (tempnum >= 40){
+      alert("It is too hot outside.")
+  }
+  else if (tempnum >= 30){
+      alert("The Weather today is Normal.")
+  }
+  else if (tempnum >= 20){
+      alert("Today's Weather is Cool.")
+  }
+  else if (tempnum >= 10){
+      alert("OMG! Today's weather is so Cool.")
+  }
+  else{
+      alert('Stay at Home and Turn Your AC')
+  }
+
+  //11. Write a program to create a calculator for +,-,*, / & %
+  // using if statements. Take the following input:
+
+  var firstnumber =+ prompt('Enter the first number!')
+  var secondnumber =+ prompt('Enter the second number.')
+  var operation = prompt("Enter any operation: +, -, *, /, %")
+
+  if (operation == "+"){
+      alert(firstnumber + secondnumber);
+  }
+  else if (operation == "-"){
+      alert(firstnumber - secondnumber);
+  } 
+  else if (operation == "*"){
+      alert(firstnumber * secondnumber);
+  } 
+  else if (operation == "/"){
+      alert(firstnumber / secondnumber)p
+  } 
+  else if (operation == "%"){
+      alert(firstnumber % secondnumber);
+  } 
+  else{
+      alert('You did something wrong. Try again!')
+  }
+  </script>
+  
+</body>
+</html>
